@@ -1,12 +1,6 @@
-<p>pokemon-details works!</p>
-<div *ngIf="pokemon">
-    <h2>{{ pokemon.name }}</h2>
-    <img [src]="pokemon.sprites.front_default" alt="Image of {{ pokemon.name }}">
-    <p><strong>Height:</strong> {{ pokemon.height }}</p>
-    <p><strong>Weight:</strong> {{ pokemon.weight }}</p>
-    <h3>Abilities:</h3>
-    <ul>
-      <li *ngFor="let ability of pokemon.abilities">{{ ability.ability.name }}</li>
-    </ul>
+<div *ngIf="pokemon$ | async as pokemon">
+    <h1>{{ pokemon.name }}</h1>
+    <img [src]="pokemon.sprites.front_default" alt="{{ pokemon.name }} sprite">
+    <p>Height: {{ pokemon.height }} m</p>
+    <p>Weight: {{ pokemon.weight }} kg</p>
   </div>
-  
