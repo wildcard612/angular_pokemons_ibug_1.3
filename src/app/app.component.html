@@ -1,4 +1,7 @@
-<nav>
-  <a routerLink="/">list of pokemons</a>
-</nav>
-<router-outlet></router-outlet>
+<ul>
+  <li *ngFor="let pokemon of pokemonList">
+    <a routerLink="/pokemon/{{pokemon.id}}">
+      {{pokemon.name}}
+    </a>
+  </li>
+</ul>

@@ -1,6 +1,6 @@
+<h1>Pokemons</h1>
 <ul>
-    <li *ngFor="let pokemon of pokemons">
-      {{ pokemon.name }}
-    </li>
-  </ul>
-  
+  <li *ngFor="let pokemon of pokemons">
+    <a routerLink="/pokemon/{{pokemon.id}}">{{pokemon.name}}</a>
+  </li>
+</ul>
